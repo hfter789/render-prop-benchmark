@@ -9,7 +9,7 @@ import FancyCounter from "./components/FancyCounter";
  * NOTE: This can't be stored in React state because it would
  * cause an infinite render loop of the ComponentCounterContainer's
  * FancyCounter.
- * 
+ *
  * Because of this, the displayed mount count will always be 1 render
  * cycle behind the actual number.
  */
@@ -66,28 +66,16 @@ class App extends Component {
               <th>Rendered</th>
               <td>
                 <ComponentCounterContainer
-                  Counter={({ count, onIncrement, onDecrement }) => (
-                    <FancyCounter
-                      count={count}
-                      onIncrement={onIncrement}
-                      onDecrement={onDecrement}
-                      color={this.state.color}
-                      onMount={this.handleComponentMount}
-                    />
-                  )}
+                  Counter={FancyCounter}
+                  color={this.state.color}
+                  onMount={this.handleComponentMount}
                 />
               </td>
               <td>
                 <RenderPropCounterContainer
-                  renderCounter={({ count, onIncrement, onDecrement }) => (
-                    <FancyCounter
-                      count={count}
-                      onIncrement={onIncrement}
-                      onDecrement={onDecrement}
-                      color={this.state.color}
-                      onMount={this.handleRenderPropMount}
-                    />
-                  )}
+                  renderCounter={props => <FancyCounter {...props} />}
+                  color={this.state.color}
+                  onMount={this.handleRenderPropMount}
                 />
               </td>
             </tr>
