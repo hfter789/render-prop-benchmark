@@ -35,6 +35,26 @@ class App extends Component {
     numberOfRenderPropMounts++;
   };
 
+  CounterComponent = ({ count, onIncrement, onDecrement }) => (
+    <FancyCounter
+      count={count}
+      onIncrement={onIncrement}
+      onDecrement={onDecrement}
+      color={this.state.color}
+      onMount={this.handleComponentMount}
+    />
+  );
+
+  renderCounter = ({ count, onIncrement, onDecrement }) => (
+    <FancyCounter
+      count={count}
+      onIncrement={onIncrement}
+      onDecrement={onDecrement}
+      color={this.state.color}
+      onMount={this.handleRenderPropMount}
+    />
+  );
+
   render() {
     return (
       <div className="App">
@@ -65,17 +85,11 @@ class App extends Component {
             <tr>
               <th>Rendered</th>
               <td>
-                <ComponentCounterContainer
-                  Counter={FancyCounter}
-                  color={this.state.color}
-                  onMount={this.handleComponentMount}
-                />
+                <ComponentCounterContainer Counter={this.CounterComponent} />
               </td>
               <td>
                 <RenderPropCounterContainer
-                  renderCounter={props => <FancyCounter {...props} />}
-                  color={this.state.color}
-                  onMount={this.handleRenderPropMount}
+                  renderCounter={this.renderCounter}
                 />
               </td>
             </tr>

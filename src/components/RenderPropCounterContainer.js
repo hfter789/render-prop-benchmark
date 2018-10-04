@@ -18,14 +18,12 @@ export default class RenderPropsCounterContainer extends React.Component {
   };
 
   render() {
-    const { renderCounter, onMount, color } = this.props;
+    const { renderCounter } = this.props;
     const { count } = this.state;
     return renderCounter({
       count,
       onIncrement: this.handleIncrement,
-      onDecrement: this.handleDecrement,
-      onMount,
-      color
+      onDecrement: this.handleDecrement
     });
   }
 }

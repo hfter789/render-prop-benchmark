@@ -18,15 +18,13 @@ export default class ComponentCounterContainer extends React.Component {
   };
 
   render() {
-    const { Counter, onMount, color } = this.props;
+    const { Counter } = this.props;
     const { count } = this.state;
     return (
       <Counter
         count={count}
         onIncrement={this.handleIncrement}
         onDecrement={this.handleDecrement}
-        onMount={onMount}
-        color={color}
       />
     );
   }
