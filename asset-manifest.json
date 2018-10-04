@@ -1,0 +1,13 @@
+{
+  "main.css": "/render-prop-benchmark/static/css/main.85bc97fc.chunk.css",
+  "main.js": "/render-prop-benchmark/static/js/main.bbd1bc29.chunk.js",
+  "main.js.map": "/render-prop-benchmark/static/js/main.bbd1bc29.chunk.js.map",
+  "static/js/1.4fd91c74.chunk.js": "/render-prop-benchmark/static/js/1.4fd91c74.chunk.js",
+  "static/js/1.4fd91c74.chunk.js.map": "/render-prop-benchmark/static/js/1.4fd91c74.chunk.js.map",
+  "runtime~main.js": "/render-prop-benchmark/static/js/runtime~main.2e178ad3.js",
+  "runtime~main.js.map": "/render-prop-benchmark/static/js/runtime~main.2e178ad3.js.map",
+  "static/css/main.85bc97fc.chunk.css.map": "/render-prop-benchmark/static/css/main.85bc97fc.chunk.css.map",
+  "index.html": "/render-prop-benchmark/index.html",
+  "precache-manifest.51bb1da82465d1609fd3304407dea117.js": "/render-prop-benchmark/precache-manifest.51bb1da82465d1609fd3304407dea117.js",
+  "service-worker.js": "/render-prop-benchmark/service-worker.js"
+}
